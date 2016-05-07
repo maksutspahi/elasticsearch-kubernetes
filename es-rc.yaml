@@ -21,6 +21,8 @@ spec:
               - IPC_LOCK
         image: quay.io/maksutspahi/elasticsearch:latest
         env:
+        - name: KUBERNETES_AUTH_TRYKUBECONFIG
+          value: "false"
         - name: KUBERNETES_CA_CERTIFICATE_FILE
           value: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
         - name: NAMESPACE

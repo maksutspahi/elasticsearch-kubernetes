@@ -15,6 +15,7 @@ spec:
       containers:
       - name: es
         securityContext:
+          privileged: true          
           capabilities:
             add:
               - IPC_LOCK
